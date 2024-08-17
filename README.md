@@ -1,4 +1,5 @@
 # Clean Code
+Clean Code is a codebase that is easy to read, understand, and maintain. It adheres to a set of best practices and principles that prioritize readability, simplicity, and clarity over abstruse or complex.
 
 ## [Solid Principles](https://github.com/Andrey-Valciuc/clean_code/tree/main/clean_code/principles/SOLID)
 
