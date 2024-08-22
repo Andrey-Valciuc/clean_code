@@ -1,12 +1,7 @@
 # Clean Code
-Clean Code is a codebase that is easy to read, understand, and maintain. It adheres to a set of best practices and principles that prioritize readability, simplicity, and clarity over abstruse or complex.
 
-## [Solid Principles](https://github.com/Andrey-Valciuc/clean_code/tree/main/clean_code/principles/SOLID)
+Clean Code refers to a set of practices and principles that guide developers in writing code that is readable, understandable, and maintainable. The goal is to write code that can be easily followed by others or yourself in the future, reducing the risk of bugs and making the codebase easier to work with over time.
 
-SOLID is a commonly packaged set of principles that are useful when constructing both individual modules or larger architectures Specifically, it is an acronym that stands for five specific object-oriented programming (OOP) design principles:
+## Content
 
-- Single responsibility principle(SRP);
-- Open-closed principle(OCP);
-- Liskov substitution principle(LSP);
-- Interface segregation principle(ISP);
-- Dependency inversion principle(DIP);
+- [Solid Principles](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/SOLID)
