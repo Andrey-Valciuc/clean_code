@@ -50,5 +50,6 @@ class CalendarExporter {
     exportFilteredEventsToJSON(filter) { }
 }
 
-Here each abstraction encapsulates its own responsibilitie.
 ```
+
+Here each abstraction encapsulates its own responsibilitie.
