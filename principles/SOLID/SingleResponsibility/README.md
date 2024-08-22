@@ -23,11 +23,11 @@
 
   In this example the caldendar class contain a lot of methods that are technically related to the calendar functionality. Howerver, the addition of all of these methods make class too complex with too many reasons to change like:
 
-  -The way time is defined on events may need to change
-  -The way titles are defined on events may need to change
-  -The way events are searched for may need to change
-  -The XML schema may need to change
-  -The JSON schema may need to change
+  - The way time is defined on events may need to change
+  - The way titles are defined on events may need to change
+  - The way events are searched for may need to change
+  - The XML schema may need to change
+  - The JSON schema may need to change
 
   So it makes sense to slip the code in more appropriate abstractions.
 
@@ -50,5 +50,5 @@ class CalendarExporter {
     exportFilteredEventsToJSON(filter) { }
 }
 
-
+Here each abstraction encapsulates its own responsibilitie.
 ```
