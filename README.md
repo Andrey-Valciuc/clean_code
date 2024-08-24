@@ -4,6 +4,6 @@ Clean Code refers to a set of practices and principles that guide developers in 
 
 ## Content
 
-- [Meaningfull Names](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/MeaningfullNames)
+- [Meaningfull Names](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/HowToNameThings)
 - [Law of Demeter](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/LawOfDemeter)
 - [Solid Principles](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/SOLID)
