@@ -9,55 +9,53 @@ So what this principle wants to say is: We should be able to add new functionali
 
 Consider the following Event class and renderNotification method from a Calendar application:
 
-```
+```javascript
 class Event {
-    renderNotification() {
-        return `You have an event occurring in
+  renderNotification() {
+    return `You have an event occurring in
     ${this.calcMinutesUntil()} minutes!`;
-    }
-    // ...
+  }
+  // ...
 }
 ```
 
 We may wish to have a separate type of event that renders a notification prefixed with the word Urgent! to ensure that the user pays more attention to it. The simplest way to achieve this adaptation is via inheritance of the Event class, as follows:
 
-```
+```javascript
 class ImportantEvent extends Event {
-    renderNotification() {
-        return `Urgent! ${super.renderNotification()}`;
-    }
+  renderNotification() {
+    return `Urgent! ${super.renderNotification()}`;
+  }
 }
 ```
 
 Here, via inheritance, we have achieved extension, adapting the Event class to our needs. Inheritance is only one way that extension can be achieved. There are various other approaches that we could take. One possibility is that, in the original implementation of Event, we foresee the need for custom notification strings and implement a way to configure a **renderCustomNotifcation** function.
 
-```
+```javascript
 class Event {
-    renderNotification() {
-        const defaultNotification = `
+  renderNotification() {
+    const defaultNotification = `
     You have an event occurring in
     ${this.calcMinutesUntil()} minutes!
     `;
-        return (
-            this.config.renderCustomNotification
-                ? this.config.renderCustomNotification(defaultNotification)
-    : defaultNotification
-    );
-    }
-    // ...
+    return this.config.renderCustomNotification
+      ? this.config.renderCustomNotification(defaultNotification)
+      : defaultNotification;
+  }
+  // ...
 }
 ```
 
 This code presumes that there is a config object available. his is crucially different from the inheritance approach in that the Event class itself is prescribing the itself is prescribing the possibilities possibilities extension that exist. Providing adaptability via configuration means that users don't need to worry about the internal implementation knowledge required when extending classes.
 
-```
+```javascript
 new Event({
-    title: 'Doctor Appointment',
-    config: {
-        renderCustomNotification: defaultNotification => {
-            return `Urgent! ${defaultNotifcation}`;
-        }
-    }
+  title: "Doctor Appointment",
+  config: {
+    renderCustomNotification: (defaultNotification) => {
+      return `Urgent! ${defaultNotifcation}`;
+    },
+  },
 });
 ```
 

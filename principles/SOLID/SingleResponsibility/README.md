@@ -8,17 +8,16 @@
 
   **Bad Approach:**
 
-  ```
+  ```javascript
   class Calendar {
-    addEvent(event) { }
-    removeEvent(event) { }
-    getEventsBetween(stateDate, endDate) { }
-    setTimeOfEvent(event, startTime, endTime) { }
-    setTitleOfEvent(event, title) { }
-    exportFilteredEventsToXML(filter) { }
-    exportFilteredEventsToJSON(filter) { }
+    addEvent(event) {}
+    removeEvent(event) {}
+    getEventsBetween(stateDate, endDate) {}
+    setTimeOfEvent(event, startTime, endTime) {}
+    setTitleOfEvent(event, title) {}
+    exportFilteredEventsToXML(filter) {}
+    exportFilteredEventsToJSON(filter) {}
   }
-
   ```
 
   In this example the caldendar class contain a lot of methods that are technically related to the calendar functionality. Howerver, the addition of all of these methods make class too complex with too many reasons to change like:
@@ -33,23 +32,22 @@
 
   **Good Approach:**
 
-```
+```javascript
 class Event {
-    setTime(startTime, endTime) { }
-    setTitle(title) { }
+  setTime(startTime, endTime) {}
+  setTitle(title) {}
 }
 
 class Calendar {
-    addEvent(event) { }
-    removeEvent(event) { }
-    getEventsBetween(stateDate, endDate) { }
+  addEvent(event) {}
+  removeEvent(event) {}
+  getEventsBetween(stateDate, endDate) {}
 }
 
 class CalendarExporter {
-    exportFilteredEventsToXML(filter) { }
-    exportFilteredEventsToJSON(filter) { }
+  exportFilteredEventsToXML(filter) {}
+  exportFilteredEventsToJSON(filter) {}
 }
-
 ```
 
 Here each abstraction encapsulates its own responsibilitie.
