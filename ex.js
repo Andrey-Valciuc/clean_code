@@ -1,11 +1,4 @@
-class Calendar {
-    getEventsAtLocation(targetLocation, kilometerRadius) {
-        return this.events.filter(event => {
-            return event.isEventWithinRadiusOf(
-                targetLocation,
-                kilometerRadius
-            );
-        });
-    }
-    // ...
-}
+const gallery = new GalleryComponent(
+    '/foo/images/PictureOne.jpg',
+    '/foo/images/PictureTwo.jpg'
+);
