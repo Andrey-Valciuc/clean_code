@@ -4,11 +4,11 @@
 
 - [Number](#number)
 - [String](#string)
-- Boolean
-- Undefined
-- Null
-- BigInt
-- Symbol
+- [Boolean](#boolean)
+- [Undefined](#undefined)
+- [Null](#null)
+- [BigInt](#bigint)
+- [Symbol](#symbol)
 
 ## Number
 
@@ -115,5 +115,25 @@ augmented into new characters.
 We've chosen to express this particular combining character via a Unicode escape sequence
 (\u0303). The format of \uXXXX allows us to express Unicode code units between U+0000
 and U+FFFF within JavaScript strings.
+
+[Go Back](#navigation-links)
+
+## Boolean
+
+[Go Back](#navigation-links)
+
+## Undefined
+
+[Go Back](#navigation-links)
+
+## Null
+
+[Go Back](#navigation-links)
+
+## BigInt
+
+[Go Back](#navigation-links)
+
+## Symbol
 
 [Go Back](#navigation-links)
