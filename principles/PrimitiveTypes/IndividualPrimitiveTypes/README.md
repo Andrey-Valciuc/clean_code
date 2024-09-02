@@ -143,16 +143,126 @@ if (hasLivedTo100) {
 
 ## Undefined
 
+The undefined primitive type expresses that something hasn't been defined yet or remains
+undefined. Unlike null, undefined may be returned by the language when
+something does not have a value:
+
+```javascript
+const coffee = {
+  type: "Flat White",
+  shots: 2,
+};
+coffee.name; // => undefined
+coffee.type; // => "Flat White"
+```
+
+It's important to distinguish between the concepts of undefined and not even declared. In
+JavaScript, if you try to evaluate an identifier that does not exist within your scope, you will
+get a ReferenceError.
+
+However, as you've already seen, if you try to evaluate a property of an object and the
+property does not exist, you will get no such error. Instead, it will evaluate to undefined:
+
+```javascript
+const obj = {};
+obj.foo; // => undefined
+```
+
+You can also use JavaScript's void operator on any value that will always return the
+real undefined value:
+
+```javascript
+void 0; // => undefined
+void null; // => undefined
+void undefined; // => undefined
+```
+
 [Go Back](#navigation-links)
 
 ## Null
+
+The null primitive type is used to express the intentional absence of a value. It is a type
+with only one value: the only null value is null.
+
+For example, let's consider an API where we specify various properties related to a
+restaurant review:
+
+```javascript
+setRestaurantFeatures({
+  hasWifi: false,
+  hasDisabledAccess: true,
+  hasParking: null,
+});
+```
+
+The null value, in this context, means that we do not know the value of hasParking yet.
+When we have the necessary information, we can specify hasParking as either true
+or false (Boolean), but to express our ignorance of its true value, we're setting it to null.
+
+It is important to check for the exact values we want so that we can avoid bugs and
+communicate effectively to the people reading our code. In this case, we may wish to
+explicitly check for undefined and null as we want to execute distinct code for that case
+versus the case of false. We could accomplish this like so:
+
+```javascript
+if (features.hasParking !== null && features.hasParking !== undefined) {
+  // hasParking is available...
+} else {
+  // hasParking is not set (undefined) or unavailable (null)
+}
+```
 
 [Go Back](#navigation-links)
 
 ## BigInt
 
+The BigInt primitive type in JavaScript is used to represent an integer of arbitrary
+precision. This means that it can be used to represent integers that are not able to be
+precisely represented by JavaScript's Number type.
+Literal BigInts are declared by suffixing any sequence of digits with the n character, like so:
+
+```javascript
+100007199254740991n;
+```
+
+BigInt is capable of representing integers of arbitrary precision, meaning that you can
+store integers of unlimited length.
+
+A BigInt can only operate on itself, and is therefore not compatible with many of JavaScript's native Math methods. All native mathematics operators work with BigInt as long as both operands are of the same type
+
+```javascript
+1n + 2n * 3n + 4n; // => 11n
+```
+
+However, if one operand is a BigInt and the other is a Number, then you'll receive a
+TypeError.
+
 [Go Back](#navigation-links)
 
 ## Symbol
+
+A Symbol primitive is used to represent an entirely unique value. Symbols are created via
+invoking the Symbol function, like so:
+
+```javascript
+const totallyUniqueKey = Symbol();
+```
+
+Symbols are used to act as property keys where uniqueness is required or where you want
+to store metadata on objects. When you add a property to an object with a Symbol key, it
+will not be iterated over by normal object iteration approaches (such as for...in). Symbol
+keys of an object can only be retrieved via Object.getOwnPropertySymbols:
+
+```javascript
+const thing = {};
+thing.name = "James";
+thing.hobby = "Kayaking";
+thing[Symbol(999)] = "Something else entirely";
+for (let key in thing) console.log(key);
+// => "name"
+// => "hobby"
+const symbols = Object.getOwnPropertySymbols(thing); // => [Symbol(999)]
+thing[symbols[0]]; // => "Something else entirely"
+```
 
 [Go Back](#navigation-links)
