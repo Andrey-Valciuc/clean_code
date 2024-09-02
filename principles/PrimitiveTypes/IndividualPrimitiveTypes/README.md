@@ -120,6 +120,25 @@ and U+FFFF within JavaScript strings.
 
 ## Boolean
 
+The Boolean primitive type in JavaScript is used to represent either true or false. These
+polar opposites are its only values:
+
+```javascript
+const isTrue = true;
+const isFalse = false;
+```
+
+Semantically, Booleans are used to represent real-life or problem domain values that can be
+considered on or off (0 or 1). We can use such values to dictate control flow within a program:
+
+```javascript
+const age = 100;
+const hasLivedTo100 = age >= 100;
+if (hasLivedTo100) {
+  console.log("Congratulations on living to 100!");
+}
+```
+
 [Go Back](#navigation-links)
 
 ## Undefined
