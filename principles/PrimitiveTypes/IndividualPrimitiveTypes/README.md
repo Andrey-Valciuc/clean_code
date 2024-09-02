@@ -3,7 +3,7 @@
 ## Navigation Links
 
 - [Number](#number)
-- String
+- [String](#string)
 - Boolean
 - Undefined
 - Null
@@ -69,5 +69,51 @@ if (Math.abs(someValue - 0.3) < Number.EPSILON) {
   // someValue is (effectively) equal to 0.3
 }
 ```
+
+[Go Back](#navigation-links)
+
+## String
+
+The String type in JavaScript allows us to express sequences of characters. Strings are expressed by delimiting sequences of characters with either single quotes,
+double quotes, or backticks:
+
+```javascript
+// Single quotes:
+const name = "Titanic";
+// Double quotes:
+const type = "Ship";
+// Template literals (back-ticks):
+const report = `
+RMS Titanic was a British passenger liner that sank
+in the North Atlantic Ocean in 1912 after the ship
+struck an iceberg during her maiden voyage.
+`;
+```
+
+We can say that Strings in JavaScript are really just an ordered sequence of 16-bit unsigned integers. Each of these integers is interpreted as a UTF-16 code unit. UTF-16 is a type of encoding for the Unicode character set.
+
+Using it, we are able to express hundreds of thousands of valid Unicode code points. This means that we can express emojis, many languages, and a myriad of Unicode oddities via our strings:
+
+![alt text](image.png)
+
+Most code points that we use from day to day only need a single code unit. These are known as
+scalars. There are, however, quite a few Unicode code points that require a pair of code
+units (known as a surrogate pair). The panda emoji is an example of such a surrogate pair:
+
+![alt text](image-1.png)
+
+Since UTF-16 only has 16 bits to work with, it has to use pairs of 16-bit integers to express
+some characters. Naturally, if we're using UTF-32 encoding (with 32 bits to play with), then
+we'd be able to express the panda emoji in a single 32-bit integer.
+
+In addition to surrogate pairs, there is another type of combination that's useful to know
+about. The Combining Code Point enables certain traditional non-combining code points to be
+augmented into new characters.
+
+![alt text](image-2.png)
+
+We've chosen to express this particular combining character via a Unicode escape sequence
+(\u0303). The format of \uXXXX allows us to express Unicode code units between U+0000
+and U+FFFF within JavaScript strings.
 
 [Go Back](#navigation-links)
