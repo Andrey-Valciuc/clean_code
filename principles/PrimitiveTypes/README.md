@@ -10,6 +10,7 @@ methods or properties. There are seven primitive types in JavaScript:
 - Null
 - BigInt
 - Symbol
+- [Show more](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/PrimitiveTypes/IndividualPrimitiveTypes)
 
 ## Immutability of primitives
 
