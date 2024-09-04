@@ -25,4 +25,4 @@ Other Keypoints:
 - Property descriptions
 - Map and WeakMap
 - The prototype
-  [Show details]()
+  [Show details](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/Objects/ObjectsDetailed)

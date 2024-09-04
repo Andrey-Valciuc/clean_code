@@ -43,6 +43,8 @@ data; // => { item3: "foo" }
 data.item3; // => "foo
 ```
 
+[Go Back](#navigation-links)
+
 ## Property descriptors
 
 When adding properties to objects in the conventional fashion, either via property access or via an object literal, the properties will be given the following implicit traits:
@@ -54,6 +56,8 @@ When adding properties to objects in the conventional fashion, either via proper
 - **writable:** This means the property's value can be changed via an assignment operator (such as obj.prop = ...)
 
 JavaScript gives you the power to turn off these traits individually, but be wary that changes to these traits can obscure the behavior of your code.
+
+[Go Back](#navigation-links)
 
 ## Map and WeakMap
 
@@ -69,6 +73,8 @@ populationBySpecies.get(reindeer); // => 2,000,000
 WeakMap is similar to Map, but it only holds a weak reference to the object that's used as a key, meaning that, if the object becomes unavailable due to being garbage-collected elsewhere in your program, then WeakMap will cease to keep a hold of it.
 
 Most of the time, a plain object is all you will need.
+
+[Go Back](#navigation-links)
 
 ## The prototype
 
@@ -99,3 +105,5 @@ available on its **Prototype**, such as **engineerPrototype**:
 pandaTheEngineer.name = "Panda";
 pandaTheEngineer.sayHello(); // => "Hello, I'm Panda and I'm an Engineer"
 ```
+
+[Go Back](#navigation-links)
