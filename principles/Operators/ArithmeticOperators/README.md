@@ -2,14 +2,14 @@
 
 There are eight arithmetic or numeric operators in JavaScript:
 
-- [Addition:](#addition) a + b
-- [Subtraction:](#substraction) a - b
-- [Division:](#division) a / b
-- [Multiplication:](#multiplication) a * b
-- [Remainder:](#remainder) a % b
-- [Exponentiation:](#exponentation) a ** b
-- [Unary plus:](#unary-plus) +a
-- [Unary minus:](#unary-minus) -a 
+- [Addition:](#addition)                a + b
+- [Subtraction:](#substraction)         a - b
+- [Division:](#division)                a / b
+- [Multiplication:](#multiplication)    a * b
+- [Remainder:](#remainder)              a % b
+- [Exponentiation:](#exponentation)     a ** b
+- [Unary plus:](#unary-plus)            +a
+- [Unary minus:](#unary-minus)          -a 
 
 Arithmetic and numeric operators will typically coerce their operands to numbers. The only exception is the + addition operator. There is one guaranteed outcome of all of these operations that is worth knowing about beforehand. An input of __NaN__ guarantees an output of __NaN__:
 
