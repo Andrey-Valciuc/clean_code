@@ -15,7 +15,7 @@ Any operator can be said to have four characteristics:
 
 Types of JavaScript operators:
 
-- [Arithmetic and numeric operators]()
+- [Arithmetic and numeric operators](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/Operators/ArithmeticOperators)
 - [Logical operators]()
 - [Comparative operators]()
 - [Assignment operators]()
