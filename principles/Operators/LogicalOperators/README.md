@@ -3,9 +3,9 @@
 Logical operators are typically used to build logical expressions where the result of the
 expression informs some action or inaction. There are three logical operators in JavaScript:
 
-- [The NOT operator]() (!a)
-- [The AND operator]() (a && b)
-- [The OR operator]() (a || b)
+- [The NOT operator](#the-logical-not-operator) (!a)
+- [The AND operator](#the-logical-and-operator) (a && b)
+- [The OR operator](#the-logical-or-operator) (a || b)
 
 The AND and OR operators, unusually, do not always evaluate to a Boolean value, and both utilize a mechanism called short-circuit evaluation to only execute both operands if some condition is met.
 
@@ -75,6 +75,8 @@ Here, the && operator is being used in a non-Boolean context, where there is no 
 its result occurring. In this case, if its left-side operand is falsy (that is, if user is falsy), then
 it will return that; otherwise, it will return the right-side operand.
 
+[Go Back](#logical-operators)
+
 ## The logical OR operator
 
 The logical OR operator (||) in JavaScript accepts two operands. If its left-side operand is
@@ -108,3 +110,5 @@ const nameOfUser = user.getName() || user.getSurname() || "Unknown";
 
 As such, it should be used cautiously in a way that considers what readers of the code are
 familiar with.
+
+[Go Back](#logical-operators)

@@ -16,8 +16,8 @@ Any operator can be said to have four characteristics:
 Types of JavaScript operators:
 
 - [Arithmetic and numeric operators](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/Operators/ArithmeticOperators)
-- [Logical operators]()
-- [Comparative operators]()
-- [Assignment operators]()
-- [Property access operators]()
-- [Other operators and syntax]()
+- [Logical operators](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/Operators/LogicalOperators)
+- [Comparative operators](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/Operators/ComparativeOperators)
+- [Assignment operators](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/Operators/AssignmentOperators)
+- [Property access operators](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/Operators/PropertyAccessOperators)
+- [Other operators and syntax](https://github.com/Andrey-Valciuc/clean_code/tree/main/principles/Operators/PropertyAccessOperators)
